@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>Joshua Prince</title>
 
@@ -26,36 +26,47 @@
   <body>
     <!-- TODO Move Navbar to a common file for all pages.-->
     <nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
-      <a class="navbar-brand" href="#">Joshua T. Prince</a>
-      <ul class="nav navbar-nav">
-        <li id="nav-home" class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/resume.pdf">Résumé</a>
-        </li>
-        <li id="nav-projects" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Projects
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/maxtower.html">Maximum Tower</a></li>
-            <li><a href="https://devpost.com/software/work-it">Work It!</a></li>
-            <li><a href="/discord.html">Discord Text Emojifier</a></li>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cnavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Joshua T. Prince</a>
+        </div>
+        <div class="collapse navbar-collapse" id="cnavbar">
+          <ul class="nav navbar-nav">
+            <li id="nav-home" class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/resume.pdf">Résumé</a>
+            </li>
+            <li id="nav-projects" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Projects
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/maxtower.html">Maximum Tower</a></li>
+                <li><a href="https://devpost.com/software/work-it">Work It!</a></li>
+                <li><a href="/discord.html">Discord Text Emojifier</a></li>
+              </ul>
+            </li>
+            <li id="nav-links" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Find me on...
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="https://github.com/Joshua-Prince">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/joshua-prince-46b836118">LinkedIn</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li id="nav-links" class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Find me on...
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="https://github.com/Joshua-Prince">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/joshua-prince-46b836118">LinkedIn</a></li>
-          </ul>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="container">
