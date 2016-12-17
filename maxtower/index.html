@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Maximum Tower</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
+  </head>
+  <body class="template">
+    <p class="header"><span>Unity WebGL Player | </span>Maximum Tower</p>
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">Maximum Tower</div>
+      <br><br><br>
+      <div class="credits">
+        Instructions: Click in the grass to place a tower (-300 power). Click an existing tower to upgrade it (-800 power for tier 2, -1800 power for tier 3). Win by reaching 10,000 power before 5 attackers reach your castle!
+        <br><br>
+        Created by Will Chilcote, Joshua Prince, and Jason Zhang in 12 hours as part of <a href="https://davisgamedev.com/2016-fall-game-jam/">UC Davis Game Jam, Fall 2016</a><br>
+        Special thanks to Kristin Kirk and Jiad Asadi for sound effects
+      </div>
+    </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/maxtowerweb.data",
+    codeUrl: "Release/maxtowerweb.js",
+    memUrl: "Release/maxtowerweb.mem",
+    
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
