@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "basket.data.unityweb",
+"asmCodeUrl": "basket.asm.code.unityweb",
+"asmMemoryUrl": "basket.asm.memory.unityweb",
+"asmFrameworkUrl": "basket.asm.framework.unityweb",
+"splashScreenStyle": "Light",
+"backgroundColor": "#80858B"
+}
