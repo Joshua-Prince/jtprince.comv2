@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Cassoundra</title>
+    <title>Perspecticles</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../common.css">
     <link rel="stylesheet" href="../navbar.css">
-    <link rel="stylesheet" href="cassoundra.css">
+    <link rel="stylesheet" href="perspecticles.css">
     <link rel="icon" href="../favicon.png">
 
     <!-- Latest compiled and minified JavaScript -->
@@ -72,70 +72,49 @@
     <div class="container">
 
       <div class="header">
-        <h1>Cassoundra</h1>
-        <p class="lead">A fully customizable sound effect bot for Discord.</p>
-        <p><a class="btn btn-primary" href="https://cassoundra.jtprince.com/" role="button">Go to App Site &raquo;</a></p>
-        <p><a class="btn btn-primary" href="https://github.com/joshuaprince/Cassoundra" role="button">GitHub &raquo;</a></p>
+        <h1>Perspecticles</h1>
+        <p class="lead">A Chrome extension that reveals the other side of controversial topics.</p>
+        <p><a class="btn btn-primary" href="https://github.com/joshuaprince/perspecticles-backend" role="button">Backend GitHub &raquo;</a></p>
+        <p><a class="btn btn-primary" href="https://github.com/ambergraham/Perspecticles" role="button">Frontend GitHub &raquo;</a></p>
+        <p><a class="btn btn-primary" href="https://devpost.com/software/perspecticles" role="button">Devpost &raquo;</a></p>
       </div>
 
       <hr>
     </div><!-- /.container -->
 
     <div id="about" class="container text-justify">
-      <p id="aboutp">
-        Soundboards are not a new idea &mdash; there are countless apps and services that offer a decent selection of
-        sound effects, with origins ranging from TV shows to video games to the users themselves. But for the
-        average Discord server, there is often a demand for very specific sound effects: perhaps the group wants to be
-        able to play sounds from a lesser-known game, or a recorded clip of one of their friends saying something
-        iconic. Maybe the group wants to hear well-known sounds, but finding soundboards for each would result in an
-        unnecessary number of bot users in the server. <br><br> I made <b>Cassoundra</b> after I saw how much fun my
-        friends had with standard soundboards, and realized how much more fun they would be if not limited to the handful
-        of sound effects selected by someone else.
+      <p id="aboutp1">
+        In today's polarized political climate, many don't venture out of their social groups, which makes even hearing
+        opposing viewpoints difficult. My team at HackDavis 2017 and I wanted to create something that would help
+        people find both sides of an issue, because hearing those we disagree with is the first step towards getting along.
+      </p>
+      <br>
+      <img class="img-responsive center-block img-rounded img" src="popup.jpg">
+      <br>
+      <p id="aboutp2">
+        Perspecticles is a Google Chrome extension that subtly highlights people, words, and phrases that are particularly
+        controversial. You simply move your mouse over the highlighted area, and a pop-up will display two links to one
+        favorable and one unfavorable news article regarding that topic.
+      </p>
+      <br>
+      <img class="img-responsive center-block img-rounded img" src="backend.jpg">
+      <br>
+      <p id="aboutp3">
+        We used the IBM's Watson and Bing's search engine APIs to curate news articles, giving them a favorability
+        rating with IBM Watson's Alchemy Language natural language processing. A sample of articles, as well as their
+        sources, is shown above. Watson was able to detect how each article presented the topic at hand, so that our
+        extension can select which articles should be shown under "favorable" and "unfavorable."
+      </p>
+      <hr>
+      <p id="aboutp4">
+        I was responsible for creating the backend of Perspecticles, which meant collecting articles from Bing, sending
+        them through Watson, and caching the articles that Watson found particularly one-sided. I also created the
+        endpoint that the extension could access to obtain an article when a controversial word appeared on a page. To
+        do so, I used Django, as it allowed a very simple and aesthetically-pleasing way for us to visualize the data
+        as we were working with it.
       </p>
       <hr>
     </div>
-
     <br>
-
-    <div class="container text-center text">
-      <h2>Simple Web Interface</h2>
-      <br>
-      <img id="uploadpage" class="img-responsive center-block img" src="uploadpage.png">
-      <p>
-        Anyone can upload any MP3 file on their computer, giving it any name that hasn't already been used. If the sound
-        effect might be startling to some listeners, it may be marked "Loud."
-      </p>
-      <br>
-      <img id="listpage" class="img-responsive center-block img" src="listpage.png">
-      <p>
-        The full list of sounds available to be played, as well as previews and play counts, are also available from
-        the web interface.
-      </p>
-      <br>
-      <hr>
-    </div>
-
-    <div id="bot" class="container text-center text">
-      <h2>Playback Interface Integrated with Discord</h2>
-      <br>
-      <p>Playing back any sound is as simple as typing it into a text channel preceded by <b>!</b> while you're in a voice call.</p>
-      <img id="commands" class="img-responsive img-rounded center-block img" src="commands.gif">
-      <br>
-      <p>Only one sound can be playing at a time. Anyone can stop the playing sound by sending a <b>~</b>.</p>
-      <br>
-      <hr>
-    </div>
-
-    <div id="youtube" class="container text-center text">
-      <h2>Online Sound Integration</h2>
-      <br>
-      <p>Even sound files that aren't uploaded to Cassoundra can be played. Nearly all video and audio websites can be
-      played as though they were uploaded directly with the website. Simply type <b>!!</b> followed by a link to the
-      sound.</p>
-      <img id="youtubepic" class="img-responsive img-rounded center-block img" src="youtube.png">
-      <br>
-      <hr>
-    </div>
-
   </body>
 </html>
