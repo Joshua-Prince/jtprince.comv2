@@ -1,0 +1,86 @@
+<!--
+/*
+* Created by Joshua Prince for jtprince.com, December 2018
+*/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Discord Text to Emoji</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="discord.css">
+</head>
+<body>
+  <div class="container">
+    <div class="pt-5 pb-3 text-center">
+      <h2>Discord Text to <img alt="Emoji" id="emoji-emoji" src="emoji.png"></h2>
+      <p>Paste some text into the box below to convert letters, numbers, and some symbols to Discord-style emoji. Hit the copy button on the right and paste it into a Discord channel!</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="">
+          <button id="btn-options" class="btn btn-outline-light btn-sm" type="button" data-toggle="collapse" data-target="#options-collapse" aria-expanded="true" aria-controls="optionsCollapse">
+            <i class="fas fa-cog"></i>
+          </button>
+          <div class="collapse" id="options-collapse">
+            <div class="card card-body">
+              <div class="form form-inline">
+                <div class="form-row text-center">
+                  <label class="mr-2" for="msgLength" data-toggle="tooltip" data-placement="bottom" title="Maximum length of converted message before splitting (to get around Discord's character limit, which is currently 2000). Delete to disable splitting">Maximum Message Length</label>
+                  <input class="form-control form-control-sm mr-4" type="number" id="msgLength" min="25" value="2000" placeholder="No Split" onchange="updateOutput()">
+                  <label class="mr-2" for="wordSplitOnly" data-toggle="tooltip" data-placement="bottom" title="If checked, words won't be split between messages">Keep Words Intact</label>
+                  <input class="form-control form-control-sm mr-4" type="checkbox" id="wordSplitOnly" checked onchange="updateOutput()">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <textarea id="input" class="form-control" placeholder="Enter text here..." rows="4" onkeyup="updateOutput()"></textarea>
+      </div>
+    </div>
+
+    <div id="div-output" style="opacity: 0;">
+      <div class="row text-center my-3">
+        <div class="col-md-12">
+          <img src="down.png" alt="Down arrow" height="98px">
+        </div>
+      </div>
+
+      <ul id="output-alerts">
+        <li id="alert-splitting" style="display: none">Discord messages have a character limit, so you'll have to paste these separately! (Configure with gear button above)</li>
+        <li id="alert-jumbo" style="display: none">This message contains characters that can't be converted to emoji, so the message won't be <a href="https://support.discordapp.com/hc/en-us/articles/207619737-Adding-Emoji-Magic">wumbo</a>!</li>
+      </ul>
+
+      <template id="output-box-template">
+        <div class="row">
+          <div class="col-md-12 output-row">
+            <textarea class="form-control output" readonly></textarea>
+            <button type="button" class="btn btn-outline-light output-copy" onclick="copyButton(this)" data-toggle="tooltip" data-placement="left" title="Copy"><i class="far fa-copy"></i></button>
+          </div>
+        </div>
+      </template>
+      <div id="output-anchor"></div>
+    </div>
+
+    <div class="row" id="footer">
+      <div class="col-md-12">
+        <p>Created by Joshua Prince (@Chips#4656) 2018. Not affiliated with Discord in any way.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="discord.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/*
+ * Created by Joshua Prince for jtprince.com, December 2018
+ */
+
+body {
+  background-color: #36393f;
+  color: #dcddde;
+  font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+h2 {
+  line-height: 1.6em;
+  margin-bottom: 30px;
+}
+
+#footer {
+  color: #52555c;
+  text-align: center;
+}
+
+.far, .fas {
+  color: white;
+}
+
+#emoji-emoji {
+  height: 1.5em;
+  margin-top: -8px;
+}
+
+.btn-outline-light {
+  border-color: #7e8084;
+}
+
+.btn-outline-light:hover {
+  border-color: #7e8084;
+  background-color: #7e8084;
+}
+
+#btn-options {
+  position: absolute;
+  right: 40px;
+  top: -30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#options-collapse {
+  margin: auto auto -1px;
+  width: 98%;
+}
+
+#options-collapse .card {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #3c3f44;
+}
+
+input#msgLength {
+  max-width: 6em;
+}
+
+#input {
+  position: relative;
+  z-index: 100;
+  text-transform: uppercase;
+  min-height: 4em;
+  background-color: #484b51 !important;
+  border-color: #36393f !important;
+}
+
+textarea {
+  color: #c0c1c3 !important;
+}
+
+#div-output {
+  transition: opacity 0.3s linear;
+}
+
+#output-alerts {
+  list-style: none;
+  padding-left: 25px;
+  font-style: italic;
+  text-indent: -20px;
+  margin-bottom: 5px;
+}
+
+.output-row {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+textarea.output {
+  font-family: monospace;
+  width: 100%;
+  height: 128px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #3e4147 !important;
+  border-color: #7e8084;
+  resize: none;
+  overflow: hidden;
+}
+
+button.output-copy {
+  position: relative;
+  right: 1px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
