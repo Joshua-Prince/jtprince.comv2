@@ -18,6 +18,11 @@ h2 {
   text-align: center;
 }
 
+#footer a {
+  color: #52555c;
+  font-family: monospace;
+}
+
 .far, .fas {
   color: white;
 }
