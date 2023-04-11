@@ -7,6 +7,11 @@
     animation: fadein 1s forwards;
 }
 
+.header h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #about {
     opacity: 0;
     -webkit-animation: fadein 1s linear 0.5s forwards; /* Safari, Chrome and Opera > 12.1 */
@@ -16,6 +21,25 @@
     animation: fadein 1s linear 0.5s forwards;
 }
 
+#about .technologies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px;
+}
+
+#about .technologies img {
+    width: 60px;
+    height: 60px;
+}
+
+img.darkened {
+    filter: grayscale(100%) brightness(70%);
+}
+
 #projects {
     opacity: 0;
     -webkit-animation: fadein 1s linear 1s forwards; /* Safari, Chrome and Opera > 12.1 */
@@ -23,6 +47,14 @@
     -ms-animation: fadein 1s linear 1s forwards; /* Internet Explorer */
     -o-animation: fadein 1s linear 1s forwards; /* Opera < 12.1 */
     animation: fadein 1s linear 1s forwards;
+}
+
+#projects h2 {
+    margin-top: 5px;
+}
+
+#projects > div {
+    margin-bottom: 20px;
 }
 
 #contact {
