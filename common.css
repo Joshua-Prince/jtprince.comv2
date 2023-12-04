@@ -1,4 +1,6 @@
 body {
+    background: #131313;
+    color: #e2e2e2;
     padding-top: 5rem;
 }
 .header {
@@ -7,4 +9,7 @@ body {
 }
 #about, #contact {
     font-size: medium;
+}
+hr {
+    border-color: #3c3f44;
 }

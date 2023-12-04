@@ -12,9 +12,9 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="/common.css">
-  <link rel="stylesheet" type="text/css" href="/navbar.css">
-  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../common.css">
+  <link rel="stylesheet" type="text/css" href="../navbar.css">
+  <link rel="icon" href="../favicon.png">
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -45,11 +45,12 @@
           </a>
           <ul class="dropdown-menu">
             <li><a href="https://crapsmap.vercel.app/">Craps Map</a></li>
+            <li><a href="https://github.com/joshuaprince/CoordinateOffset">CoordinateOffset</a></li>
+            <li><a href="https://github.com/joshuaprince/blackjack_composition">Blackjack Composition</a></li>
+            <li><a href="/3e8">3e8</a></li>
             <li><a href="/perspecticles">Perspecticles</a></li>
-            <li><a href="/3e8">3E8</a></li>
-            <li><a href="/basket">Basket Tower</a></li>
             <li><a href="/cassoundra">Cassoundra</a></li>
-            <li><a href="/maxtower">Maximum Tower</a></li>
+            <li><a href="/basket">Basket Tower</a></li>
           </ul>
         </li>
         <li id="nav-links" class="dropdown">
@@ -67,7 +68,16 @@
   </div>
 </nav>
 <div style="position: absolute; top: 50%; left: 50%; width: 960px; height: 540px; margin: -270px 0 0 -480px;">
-  <iframe style="position: absolute; top: 0; left:0; width:960px;  border:0 #000000 none;" src="basketgame.html" width="960" height="540" scrolling="no"></iframe>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; max-width: 100vw; text-align: center">
+  <div class="header">
+    <h1>Basket Tower</h1>
+  </div>
+  <div style="margin-bottom: 30px">
+    Created solo in 12 hours as part of UC Davis Game Dev and Arts Club Game Jam in Spring 2017. Use WASD and spacebar
+    to control, R to reset, and G to toggle whether the ground is present.
+  </div>
+  <iframe style="border:0 #000000 none;" src="basketgame.html" width="960" height="540" scrolling="no"></iframe>
 </div>
 
 <!-- Begin Analytics - https://github.com/milesmcc/shynet -->
